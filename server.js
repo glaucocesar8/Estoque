@@ -81,7 +81,7 @@ app.post('/api/register', async (req, res) => {
 });
 
 // Endpoint for user login
-app.post('https://glaucocesar8.github.io/Estoque/api/login', async (req, res) => {
+app.post('/api/login', async (req, res) => {
     const { username, password } = req.body;
 
     if (!username || !password) {
