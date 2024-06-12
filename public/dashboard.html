@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Adicione aqui estilos para o scrollview da tabela */
+        .table-container {
+            max-height: 300px; /* Ajuste a altura conforme necessário */
+            overflow-y: auto;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+        .table-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-container th, .table-container td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastrar Itens</h2>
+        <div id="message" class="hidden"></div>
+        <form id="file-form">
+            <input type="file" id="file-input" />
+            <button type="submit">Importar Arquivo</button>
+        </form>
+        <form id="item-form">
+            <input type="text" id="itemnum" placeholder="Código do Item" required />
+            <input type="text" id="description" placeholder="Descrição do Item" required />
+            <input type="text" id="binnum" placeholder="Bin Number" required />
+            <input type="text" id="binnum1" placeholder="Bin Number 1" required />
+            <input type="number" id="curbal" placeholder="Current Balance" required />
+            <input type="text" id="status" placeholder="Status" required />
+            <input type="number" id="avgcost" placeholder="Average Cost" required />
+            <input type="number" id="avgcost2" placeholder="Average Cost 2" required />
+            <input type="date" id="lastissuedate" placeholder="Last Issue Date" required />
+            <button type="submit">Salvar</button>
+        </form>
+        
+        <h3>Itens Cadastrados</h3>
+        <h4>Pesquisar Itens</h4>
+                <input type="text" id="search-query" placeholder="Digite a descrição do item" />
+                <button id="search-button">Pesquisar</button>               
+        <div class="table-container">            
+            <table id="items-table">
+                <thead>
+                    <tr>
+                        <th>Código do Item</th>
+                        <th>Descrição do Item</th>
+                        <th>Bin Number</th>
+                        <th>Bin Number 1</th>
+                        <th>Current Balance</th>
+                        <th>Status</th>
+                        <th>Average Cost</th>
+                        <th>Average Cost 2</th>
+                        <th>Last Issue Date</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Itens serão adicionados aqui -->
+                </tbody>
+            </table>
+        </div>
+        <button id="logout-button" onclick="logout()">Sair</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
