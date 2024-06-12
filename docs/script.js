@@ -15,7 +15,7 @@ function login() {
     const username = document.getElementById('login-username').value;
     const password = document.getElementById('login-password').value;
 
-    fetch('/api/login', {
+    fetch('https://glaucocesar8.github.io/Estoque/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
