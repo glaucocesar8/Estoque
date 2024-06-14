@@ -15,7 +15,7 @@ function login() {
     const username = document.getElementById('login-username').value;
     const password = document.getElementById('login-password').value;
 
-    fetch('https://vercel.com/glaucos-projects-0b58e490/estoque/GRvEvx8naM3kPyyJ78fBnbZ43BDX/api/login', {
+    fetch('/api/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
